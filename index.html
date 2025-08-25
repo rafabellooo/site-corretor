@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pacotes para Corretores Autônomos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 30px;
+      color: #333;
+    }
+    .pricing-table {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h2 {
+      margin-bottom: 10px;
+      color: #0077b6;
+    }
+    .price {
+      font-size: 1.2rem;
+      color: #222;
+      margin: 10px 0;
+      font-weight: bold;
+    }
+    .features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px 0;
+      text-align: left;
+    }
+    .features li {
+      margin: 8px 0;
+      color: #555;
+    }
+    .btn {
+      display: inline-block;
+      background: #0077b6;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+      cursor: pointer;
+      border: none;
+      font-size: 1rem;
+    }
+    .btn:hover {
+      background: #005f87;
+    }
+    .highlight {
+      border: 2px solid #0077b6;
+      transform: scale(1.05);
+    }
+    /* Marca d'água */
+    .watermark {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      font-size: 0.8rem;
+      color: 
+      rgba(0, 0, 0, 0.404);
+      pointer-events: none;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Pacotes para Corretores Autônomos</h1>
+    <div class="pricing-table">
+      <!-- Pacote Básico -->
+      <div class="card">
+        <h2>Básico</h2>
+        <div class="price">R$ 600 / R$ 750 com 1 ano de hospedagem</div>
+        <ul class="features">
+          <li>Site simples (Início, Imóveis, Contato)</li>
+          <li>Layout responsivo</li>
+          <li>Formulário de contato (e-mail/WhatsApp)</li>
+          <li>Prazo: 5–7 dias</li>
+        </ul>
+        <button class="btn" onclick="escolherPacote('Básico')">Escolher</button>
+      </div>
+
+      <!-- Pacote Intermediário -->
+      <div class="card highlight">
+        <h2>Intermediário</h2>
+        <div class="price">R$ 1.500 / R$ 1.650 com 1 ano de hospedagem</div>
+        <ul class="features">
+          <li>Tudo do Básico</li>
+          <li>Lista de até 20 imóveis</li>
+          <li>Filtros simples (cidade, tipo)</li>
+          <li>WhatsApp em cada imóvel</li>
+          <li>Prazo: 10–15 dias</li>
+        </ul>
+        <button class="btn" onclick="escolherPacote('Intermediário')">Escolher</button>
+      </div>
+
+      <!-- Pacote Premium -->
+      <div class="card">
+        <h2>Premium</h2>
+        <div class="price">R$ 3.000 / R$ 3.200 com 1 ano de hospedagem</div>
+        <ul class="features">
+          <li>Tudo do Intermediário</li>
+          <li>Painel simples para gerenciar imóveis</li>
+          <li>Galeria de fotos</li>
+          <li>SEO básico (Google)</li>
+          <li>Prazo: 20–30 dias</li>
+        </ul>
+        <button class="btn" onclick="escolherPacote('Premium')">Escolher</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Marca d'água -->
+  <div class="watermark">Desenvolvido por Rafael Bello</div>
+
+  <script>
+    function escolherPacote(pacote) {
+      let numero = "5547997817091"; // WhatsApp do corretor
+      let mensagem = encodeURIComponent(`Olá, quero contratar o pacote ${pacote}`);
+      window.open(`https://wa.me/${numero}?text=${mensagem}`, "_blank");
+    }
+  </script>
+</body>
+</html>
